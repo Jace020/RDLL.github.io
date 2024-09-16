@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+    <!-- ====== Je configure la langue de l'HTML en Français ====== -->
+
+<html lang="fr">
+<head>
+  
+    <!-- Je définis l'encodage des caractères -->
+<meta charset="UTF-8">
+
+<!-- Je définis la compatibilité du navigateur avec Internet Explorer -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Je définis la taille d'affichage et de l'échelle initiale -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Je définis le titre de la page -->
+<title>REL</title>
+
+<!-- Liaison du fichier CSS externe -->
+<link rel="stylesheet" href="css_groupe 3.css">
+
+</head>
+  
+  
+<body>
+<!-- Je définis balise de navigation -->
+<nav class="navbar">
+  
+    <!-- Contenu de la barre de navigation -->
+    <div class="navbar-brands">
+      
+        <!-- Lien vers la page d'accueil -->
+        <a href="html_groupe 3.html">
+            Répertoire des <span>Lectures Linéaires</span>
+        </a>
+    </div>
+    <!-- Conteneur du menu burger -->
+    <div class="burger-container">
+      
+        <!-- Menu burger -->
+        <div class="burger">
+          
+            <span></span>
+          
+        </div>
+      
+    </div>
+  
+</nav>
+
+  
+  <!-- ====== Je crée une classe "navlinks-containers" ======= -->
+  
+<ul class="navlinks-container">
+  
+  <!-- ====== Je crée une section avec quatre lien et titre, avec un titre de niveau cinq  ======= -->
+  
+    <li class="section-lg">
+        <h5>Mr.Mongeais</h5>
+        <ul>
+            <li><a href="T1-Mongeais.html">Theme 1: Spéctacle et Comédie</a></li>
+            <li><a href="T2-Mongeais.html">Theme 2: Rire et savoir</a></li>
+            <li><a href="T3-Mongeais.html">Theme 3: Personnage en marge, plaisir du romanesque</a></li>
+            <li><a href="T4-Mongeais.html">Theme 4: Alchimie Poétique, la boue et l'or</a></li>
+        </ul>
+    </li>
+  
+  <!-- ====== Je crée une section avec cinq lien et titre, avec un titre de niveau cinq  ======= -->
+  <!-- ====== Le premier redirige vers une autre page ====== -->
+  <!-- ====== Mais pas les quatres autres, au lieu de rediriger vers une autre page, ils envoient une alerte   ======= -->
+  
+    <li class="section-lg">
+        <h5>Mme.Dena</h5>
+        <ul>
+            <li><a href="Explication.html">Récapitulatif et explication</a></li>
+            <li><a href="javascript:void(0);" onclick="indsiponible()">Theme 1: Spéctacle et Comédie</a></li>
+            <li><a href="javascript:void(0);" onclick="indsiponible()">Theme 2: Rire et savoir</a></li>
+            <li><a href="javascript:void(0);" onclick="indsiponible()">Theme 3: Personnage en marge, plaisir du romanesque</a></li>
+            <li><a href="javascript:void(0);" onclick="indsiponible()">Theme 4: Alchimie Poétique, la boue et l'or</a></li>
+        </ul>
+    </li>
+  
+  <!-- ====== Je crée une section avec quatre lien et titre, avec un titre de niveau cinq  ======= -->
+  
+    <li class="section-lg">
+        <h5>Mme.Bordujenko</h5>
+        <ul>
+            <li><a href="T1-Bordujenko.html">Theme 1: Spéctacle et Comédie</a></li>
+            <li><a href="T2-Bordujenko.html">Theme 2: Rire et savoir</a></li>
+            <li><a href="T3-Bordujenko.html">Theme 3: Personnage en marge, plaisir du romanesque</a></li>
+            <li><a href="T4-Bordujenko.html">Theme 4: Alchimie Poétique, la boue et l'or</a></li>
+        </ul>
+    </li>
+  
+  <!-- ====== Je crée une section avec trois lien et titre, avec un titre de niveau cinq  ======= -->
+  
+    <li class="section-lg">
+        <h5>Besoin d'aide ?</h5>
+        <ul>
+            <li><a href="Grammaire.html">Réviser la grammaire</a></li>
+            <li><a href="Le Site.html">Le fonctionnement du site</a></li>
+            <li><a href="Les Devs.html">Les dévelopeurs du projet</a></li>
+            <li><a href="Contacts.html">Nous contacter</a></li>
+        </ul>
+    </li>
+</ul>
+
+  
+  <!-- Je crée un titre de niveau deux, puis j'écris deux paragraphe -->
+  
+  <ul>
+    
+    <h2>
+      Qui sont les génis derriere ce projet?
+    </h2>
+  
+      <p>
+        Nous sommes un groupe d'étudiant, en première général en spécialité NSI.
+        Nous sommes quatre derrières le site : Barbier Veillon Evan, le développeur principal de la structure du site.
+        Lukas Rodriguez, celui qui a développé l'intégralité du JavaScript du site, c'est-à-dire les animations.
+        Nino Gomez est celui qui s'est occupé du CSS du site, il est le responsable de l'apparence du site.
+        Et Baptiste Duranceau, qui secondait Evan avec l'HTML.
+      </p>
+  
+    <p>
+      Remerciement spécial à "ayle" sans qui le projet ne serait pas de si bonne qualité.
+      Ayle est un programmeur professionnel qui a permis à l'équipe du mieux abordé l'HTML, le CSS et le JavaScript.
+    </p>
+  
+  </ul>
+  
+  <!-- J'utilise footer pour désigner le pied de page -->
+  
+   <footer>
+    <p>© 2023 Répertoire des études linéaires. Tous droits réservés.</p>
+  </footer>
+
+<!-- ====== Je lie mon JS avec mon HTML ======= -->
+<script src="js_groupe 3.js"></script>
+  
+</body>
+</html>

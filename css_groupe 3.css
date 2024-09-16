@@ -1,0 +1,263 @@
+/*# J'importe la police d'écriture "Montserrat" depuis la base de données "GoogleFonts" */
+
+/*# Je définis l'écarte entre le texte et le bord (padding) à zéro, puis je définis la marge a zéro */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*# Je réinitialise le CSS de la page pour mieux le modifié ensuite */
+/*# J'enleve tout les style de liste et les décoration de texte */
+
+ul, li, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/*# Je definis le "body" commun de mes pages */
+/*# Elles seront toute écritent en 'Montserrat', sauf s'il est indisponnible, le texte sera en 'sans-serif' */
+/*# La taille de la police d'écriture est définis a 14px */
+/*# La.... est définis a 400 */
+/*# L'espace entre chaque ligne est définis a 1 */
+/*# La couleur de base est définis en noir */
+/*# La couleur du fond est définis en blanc */
+/*# Le texte qui déborde de la page est caché */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #302e4d;
+  background: #fdf9ff;
+  overflow-x: hidden; }
+
+/*# Je crée la réaction de l'icone du menu Burger */
+/*# Lorsque je clique dessue la barre du milieu disparait et les deux autre tournent de façons a former un croix */
+
+body.clicked nav.navbar div.burger-container .burger span {
+  background: transparent; }
+  body.clicked nav.navbar div.burger-container .burger span::before {
+    transform: rotate(-45deg) translateY(15px); }
+  body.clicked nav.navbar div.burger-container .burger span::after {
+    transform: rotate(45deg) translateY(-14px); }
+
+/*# Je crée l'icone de menu Burger */
+
+/* Je sélectionne la barre de navigation avec la classe "navbar" */
+nav.navbar {
+    position: fixed; /* Je positionne la barre de navigation de façon fixe */
+    z-index: 10000; /* J'attribue un index de position élevé */
+    width: 100%; /* J'attribue une largeur de 100% */
+    display: flex; /* J'utilise un modèle d'affichage en ligne pour les éléments enfants */
+    background: white; /* Je définis un fond blanc pour la barre de navigation */
+    justify-content: space-between; /* Je répartis l'espace libre de manière égale entre les éléments */
+    align-items: center; /* Je centre verticalement les éléments */
+    padding: 20px 40px; /* J'ajoute un espacement de 20 pixels en haut et en bas, et de 40 pixels sur les côtés */
+}
+
+/* Je sélectionne le conteneur de la marque dans la barre de navigation */
+nav.navbar div.navbar-brands {
+    flex: 0 0 80%; /* J'attribue une taille flexible de 80% sans rétrécissement ni extension */
+    max-width: 80%; /* Je définis une largeur maximale de 80% */
+}
+
+/* Je sélectionne le lien dans le conteneur de la marque */
+nav.navbar div.navbar-brands a {
+    font-size: 20px; /* J'attribue une taille de police de 20 pixels */
+    position: relative; /* Je positionne le lien de manière relative */
+    top: 0px; /* Je le positionne à 0 pixels en haut */
+    color: #302e4d; /* Je définis une couleur de texte */
+    font-style: italic; /* J'applique un style de police en italique */
+    transition: color .4s; /* J'ajoute une transition pour la propriété de couleur de 0.4 seconde */
+}
+
+/* Je sélectionne le span à l'intérieur du lien dans le conteneur de la marque */
+nav.navbar div.navbar-brands a span {
+    color: #ffb037; /* Je définis une couleur de texte */
+    font-weight: 600; /* Je définis un poids de police en gras */
+    transition: color .2s; /* J'ajoute une transition pour la propriété de couleur de 0.2 seconde */
+}
+
+/* Je sélectionne le span à l'intérieur du lien dans le conteneur de la marque lorsqu'il est survolé */
+nav.navbar div.navbar-brands a:hover span {
+    color: #ff9c04; /* Je change la couleur du texte lorsqu'il est survolé */
+}
+
+/* Je sélectionne le conteneur du burger dans la barre de navigation */
+nav.navbar div.burger-container {
+    flex: 0 0 20%; /* J'attribue une taille flexible de 20% sans rétrécissement ni extension */
+    max-width: 20%; /* Je définis une largeur maximale de 20% */
+    display: flex; /* J'utilise un modèle d'affichage en ligne pour les éléments enfants */
+    flex-direction: column; /* J'applique une disposition en colonne aux éléments enfants */
+    justify-content: center; /* Je centre verticalement les éléments */
+    align-items: end; /* Je les aligne sur le bord inférieur */
+}
+
+/* Je sélectionne le conteneur du burger dans la barre de navigation */
+nav.navbar div.burger-container .burger {
+    position: absolute; /* Je positionne le burger de manière absolue */
+    height: 40px; /* J'attribue une hauteur de 40 pixels */
+    width: 40px; /* J'attribue une largeur de 40 pixels */
+    display: flex; /* J'utilise un modèle d'affichage en ligne pour les éléments enfants */
+    justify-content: center; /* Je centre horizontalement les éléments */
+    align-items: end; /* Je les aligne sur le bord inférieur */
+    flex-direction: column; /* J'applique une disposition en colonne aux éléments enfants */
+}
+
+/* Je sélectionne le burger lorsqu'il est survolé */
+nav.navbar div.burger-container .burger:hover {
+    cursor: pointer; /* Je change le curseur en une main pointant */
+}
+
+/* Je sélectionne le span à l'intérieur du burger */
+nav.navbar div.burger-container .burger span {
+    position: relative; /* Je positionne le span de manière relative */
+    width: 40px; /* J'attribue une largeur de 40 pixels */
+    height: 2px; /* J'attribue une hauteur de 2 pixels */
+    background: #ffb037; /* Je définis une couleur de fond */
+    transition: .2s; /* J'ajoute une transition de 0.2 seconde */
+}
+
+/* Je sélectionne le pseudo-élément ::before à l'intérieur du span du burger */
+nav.navbar div.burger-container .burger span::before {
+    position: absolute; /* Je positionne le pseudo-élément de manière absolue */
+    content: ''; /* J'ajoute du contenu vide */
+    right: 0; /* Je le positionne à droite */
+    top: -10px; /* Je le positionne à 10 pixels au-dessus */
+    width: 40px; /* J'attribue une largeur de 40 pixels */
+    height: 2px; /* J'attribue une hauteur de 2 pixels */
+    background: #ffb037; /* Je définis une couleur de fond */
+    transition: .4s; /* J'ajoute une transition de 0.4 seconde */
+}
+
+/* Je sélectionne le pseudo-élément ::after à l'intérieur du span du burger */
+nav.navbar div.burger-container .burger span::after {
+    position: absolute; /* Je positionne le pseudo-élément de manière absolue */
+    content: ''; /* J'ajoute du contenu vide */
+    right: 0; /* Je le positionne à droite */
+    bottom: -10px; /* Je le positionne à 10 pixels en dessous */
+    width: 40px; /* J'attribue une largeur de 40 pixels */
+    height: 2px; /* J'attribue une hauteur de 2 pixels */
+    background: #ffb037; /* Je définis une couleur de fond */
+    transition: .4s; /* J'ajoute une transition de 0.4 seconde */
+}
+
+
+/* Je sélectionne la liste non ordonnée avec la classe "navlinks-container" */
+ul.navlinks-container {
+  transition: .4s; /* J'ajoute une transition de 0.4 seconde */
+  z-index: 1; /* Je définis l'index de position pour la superposition des éléments */
+  display: flex; /* J'utilise un modèle d'affichage en ligne pour les éléments enfants */
+  transform: translateX(100%); /* Je déplace horizontalement de 100% de la largeur de l'élément */
+  justify-content: space-around; /* Je répartis l'espace libre autour des éléments */
+  align-items: center; /* Je centre verticalement les éléments */
+  width: 100%; /* Je définis une largeur de 100% */
+  height: auto; /* J'ajuste la hauteur automatiquement en fonction du contenu */
+  background: #504e70; /* Je définis une couleur d'arrière-plan */
+  position: absolute; /* Je positionne l'élément de façon absolue par rapport à son parent */
+  top: 0; /* Je le positionne en haut */
+  right: 0; /* Je le positionne à droite */
+  padding: 0 20px; /* J'ajoute un espacement de 0 sur les côtés et de 20px en haut et en bas */
+}
+
+  /* J'ajoute une classe "visible" à la liste non ordonnée avec la classe "navlinks-container" */
+  ul.navlinks-container.visible {
+    transform: translateX(0); /* Je rétablis la position horizontale à 0 */
+  }
+
+  /* Je sélectionne les éléments de liste avec la classe "section-lg" dans la liste non ordonnée "navlinks-container" */
+  ul.navlinks-container li.section-lg {
+    width: 28%; /* Je définis une largeur de 28% */
+    padding: 0 20px; /* J'ajoute un espacement de 0 sur les côtés et de 20px en haut et en bas */
+  }
+
+    /* Je sélectionne les titres de niveau 5 à l'intérieur des éléments de liste avec la classe "section-lg" */
+    ul.navlinks-container li.section-lg h5 {
+      font-size: 27px; /* Je définis une taille de police de 27 pixels */
+      font-weight: 700; /* Je définis une épaisseur de police en gras */
+      color: #ffb037; /* Je définis une couleur de texte */
+      margin-bottom: 10px; /* J'ajoute une marge en bas de 10 pixels */
+      font-style: italic; /* Je définis un style de police en italique */
+    }
+
+    /* Je sélectionne les listes à puces à l'intérieur des éléments de liste avec la classe "section-lg" */
+    ul.navlinks-container li.section-lg ul {
+      display: flex; /* J'utilise un modèle d'affichage en ligne pour les éléments enfants */
+      flex-direction: column; /* Je définis une disposition en colonne pour les éléments enfants */
+      justify-content: space-between; /* Je répartis l'espace libre entre les éléments */
+      height: 15vh; /* Je définis une hauteur de 15% de la hauteur de la vue */
+    }
+
+      /* Je sélectionne les liens à l'intérieur des listes à puces à l'intérieur des éléments de liste avec la classe "section-lg" */
+      ul.navlinks-container li.section-lg ul li a {
+        font-size: 15px; /* Je définis une taille de police de 15 pixels */
+        line-height: 1.6; /* Je définis une hauteur de ligne de 1.6 */
+        color: #fdf9ff; /* Je définis une couleur de texte */
+      }
+
+        /* Je sélectionne les liens lorsqu'ils sont survolés à l'intérieur des listes à puces à l'intérieur des éléments de liste avec la classe "section-lg" */
+        ul.navlinks-container li.section-lg ul li a:hover {
+          color: #ffb037; /* Je change la couleur du texte lorsqu'il est survolé */
+        }
+
+/*# sourceMappingURL=style.css.map */
+
+/*# Je définie la place de chaque liste sur la page */
+/*# Notez que les puces n'apparaissent pas car elles ont été enlever au débuts du css */
+
+ul {
+  position: relative;
+  top: 70px;
+  left: 15px;
+  }
+
+/*# Je définie la place de chaque titre ,qui ce situe dans une liste, sur la page */
+
+ ul, h2,{
+    position: relative;
+    bottom: -10px;
+  }
+
+/*# Je définie la place de chaque paragraphe ,qui ce situe dans une liste, sur la page */   
+/*# Je définis aussi l'écarts entre chaque ligne dans le meme cas. */  
+
+    ul, p{
+      margin-right: 10px;
+      position: relative;
+      line-height: 4vh;
+      bottom: -20px;
+      
+    }
+
+/*# Je définie la place du pied de page car il ne prend pas en compte la banniere */   
+
+footer {
+  position: relative;
+  left: 14px;
+  top: 240px;
+}
+
+img {
+  position: relative;
+  top: 80px; left: 100px;
+  width : 50px;
+  height : 50px;
+}
+
+iframe {
+  position: relative;
+  top: 90px; left: 100px;
+}
+
+a, herf, mailto{
+  position: relative;
+      bottom: -20px;
+}  
+
+    
+
+      
